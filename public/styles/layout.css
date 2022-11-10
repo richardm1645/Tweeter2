@@ -15,11 +15,39 @@ html {
  */
 
 body {
+  margin: 0;
+  padding: 0;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: #4056A1;
+  height: 120px;
+  justify-content: space-between;
 }
 
 /*
- * Additional CSS can be defined below or in other CSS files, as per instructions
+ * Navbar specific CSS
  */
+
+.navbar-logo {
+  font-family: 'Bungee', cursive;
+  margin-left: 1.5em;
+  font-size: 1.5rem;
+}
+
+.navbar-links {
+  margin-right: 1.5em;
+  flex-direction: column;
+}
+
+.fa-angles-down {
+  color: #f23a1a;
+  margin-left: 75px;
+}
