@@ -1,0 +1,8 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px; /*Navbar is 200px, required height is 400px*/
+  width: 100%;
+}
