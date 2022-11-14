@@ -16,13 +16,14 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-
+    <link rel="stylesheet" href="/styles/tweet-container.css" type="text/css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/tweet-container.js"></script>
   </head>
 
   <body>
@@ -58,5 +59,22 @@
           </div>
         </form>
       </section>      
+      <article class="tweet-container">
+        <header>
+          <h1 style="margin-left: 0.7em">Newton</h1>
+          <h1 class="tweet-container-handle">@SirIsaac</h1>
+        </header>
+          <p class="tweet-container-body">
+            Hello world Hello world Hello world Hello world Hello world
+          </p>
+        <footer>
+          <p>10 days ago</p>
+          <div class="tweet-container-footer-reactions">
+            <i class="fa-solid fa-flag"></i>
+            <i class="fa-solid fa-retweet"></i>
+            <i class="fa-solid fa-heart"></i>
+          </div>          
+        </footer>
+      </article>
   </body>
 </html>
