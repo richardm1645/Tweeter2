@@ -4,6 +4,24 @@
   width: 60%;
 }
 
+.error-element{
+  height: 60px;
+  border: 6px solid #e55238e6;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.error-element-text{
+  color: #e55238e6;
+}
+
+.fa-exclamation-triangle{
+  color: #e55238e6;
+}
+
 .tweet-info{
   display: flex;
   justify-content: space-between;
