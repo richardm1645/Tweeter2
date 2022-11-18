@@ -50,8 +50,8 @@ const loadTweets = function() {
     dataType: 'json', // added data type
     success: function(res) {
       console.log(res)
-      $('.tweet-span').empty();
-      $('.tweet-span').append(renderTweets(res)); 
+      $('.tweets-list').empty();
+      $('.tweets-list').append(renderTweets(res)); 
     }
   });
 }

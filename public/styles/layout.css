@@ -35,7 +35,11 @@ body {
   position: fixed;
 }
 
-main, .tweet-span {
+/*
+main and all the tweets use the same styling
+*/
+
+main, .tweets-list {
   display: flex;
   flex-direction: column;
   align-items: center;
