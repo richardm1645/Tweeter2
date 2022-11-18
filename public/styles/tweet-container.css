@@ -7,6 +7,10 @@
   border: 6px solid #545149;
 }
 
+.tweet-container:hover {
+  box-shadow: 10px 10px #c9cbdf;
+}
+
 .tweet-container header {
   flex-direction: row;
   font-size: small;
@@ -54,4 +58,8 @@
 .tweet-container-footer-reactions {
   margin: 0.5em;
   color: #4055a1;
+}
+
+.fa-solid:hover {
+  color: #cc9924;
 }

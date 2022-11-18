@@ -42,31 +42,21 @@ const renderTweets = function(tweets) {
   return tweetContainers;
 }
 
-$(document).ready(function() {
-  //Appends all the tweets from the data to the main container
-  /*
-  const getAjaxData = function(res) {
-    $.ajax({
-      url: "http://localhost:8080/tweets",
-      type: 'GET',
-      dataType: 'json', // added data type
-      success: function(res) {
-        console.log(res)
-        $('.container').append(renderTweets(res)); 
-      }
-    });
-  }
-  */
-
+//Appends all the tweets so far into the main container
+const loadTweets = function() {
   $.ajax({
     url: "http://localhost:8080/tweets",
     type: 'GET',
     dataType: 'json', // added data type
     success: function(res) {
       console.log(res)
-      $('.container').append(renderTweets(res)); 
+      $('.tweet-span').empty();
+      $('.tweet-span').append(renderTweets(res)); 
     }
   });
+}
+
+$(document).ready(function() {
+  loadTweets()
 });
 
-modules.exports = { getAjaxData }

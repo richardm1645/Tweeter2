@@ -11,6 +11,7 @@ $(document).ready(function() {
   $("#tweet-post").on("submit", function(event) {
     event.preventDefault() //Prevents page refresh
     let tweetContent = $(this).serialize();
+    //Form validation: Can't post if the form is empty or < 140 characters
     if ($("#tweet-text").val().length < 1) {
       alert("Please enter a valid tweet.");
     
@@ -18,10 +19,12 @@ $(document).ready(function() {
       alert("Your tweet is too long.");
     
     } else {
-    //Ajax Post request format: $.post(URL,data,callback); 
-    $.post("http://localhost:8080/tweets", //URL
-    tweetContent //Data
-    )}  
-    
+      //Ajax Post request format: $.post(URL,data,callback); 
+      $.post("http://localhost:8080/tweets", //URL
+      tweetContent) //Data
+      .then( () => {
+        loadTweets() //from client.js
+      }) 
+    }  
   });
 });

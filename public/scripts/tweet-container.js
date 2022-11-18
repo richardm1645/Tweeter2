@@ -1,6 +1,9 @@
+//This file had some conflicts with client.js, most likely used as backup
+
 $(document).ready(function() {
   //Applies a shadow when hovering over tweet container
-  $(".tweet-container").mouseover(function() {
+  $(".tweet-container").mouseover(function() { 
+    alert("foo")
     $(this).css("box-shadow", "10px 10px #c9cbdf");
   })
   $(".tweet-container").mouseout(function(){
@@ -27,3 +30,4 @@ $(document).ready(function() {
     $(this).css("color", "#4055a1");
   });
 });
+

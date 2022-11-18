@@ -35,13 +35,12 @@ body {
   position: fixed;
 }
 
-main {
+main, .tweet-span {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 90%;
-  margin-left: 5%;
 }
 
 /*
