@@ -1,5 +1,6 @@
 //Handles script when the user submits a tweet
 $(document).ready(function() {
+
   //Changes color of the "Tweet" button on mouseover
   $("#tweet-button").mouseover(function() {
     $(this).css("background-color", "#829bef");
@@ -8,11 +9,13 @@ $(document).ready(function() {
     $(this).css("background-color", "#4056a1");
   });
 
+  
+
   $("#tweet-post").on("submit", function(event) {
     event.preventDefault() //Prevents page refresh
-    let tweetContent = $(this).serialize();
-    $("<div>").text(tweetContent);
     
+    let tweetContent = $(this).serialize();
+
     //Form validation: Can't post if the form is empty or > 140 characters
     if ($("#tweet-text").val().length < 1) {
       //Change the HTML and Makes the error element visible
@@ -24,6 +27,7 @@ $(document).ready(function() {
       $(".error-element").css({"display": "inherit"});
     
     } else {
+
       //Success! Erase the error if there is one, post the content via Ajax
       $(".error-element").css({"display": "none"});
       $.post("http://localhost:8080/tweets", 
