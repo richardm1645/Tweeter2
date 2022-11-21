@@ -14,7 +14,7 @@
 .tweet-container header {
   flex-direction: row;
   font-size: small;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: flex-start;
   height: auto;
 }

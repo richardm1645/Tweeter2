@@ -55,12 +55,14 @@ const loadTweets = function() {
     type: 'GET',
     dataType: 'json', // added data type
     success: function(res) {
+      //Replaces the container of tweets with updated ones
       $('.tweets-list').empty();
       $('.tweets-list').append(renderTweets(res)); 
     }
   });
 }
 
+//Upon server bootup, display the initial tweets
 $(document).ready(function() {
   loadTweets()
 });
