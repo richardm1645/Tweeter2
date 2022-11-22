@@ -34,6 +34,10 @@
   border: none;
 }
 
+.tweet-button:hover {
+  background-color: #829bef;
+}
+
 #tweet-text{
   display: flex;
   align-items: center;

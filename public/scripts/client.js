@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+//Escape function to avoid unwanted characters
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
@@ -35,18 +36,18 @@ const createTweetElement = function(tweetObject) {
   </article>
   `
   return tweetHTML;
-}
+};
 
 //Calls all the tweets in the data and appends them onto the page
 const renderTweets = function(tweets) {
   let tweetContainers = '';
   //Loops through all the tweet profiles in the database array
-  for (const tweet of tweets) {
-    tweetContainers += createTweetElement(tweet);
+  for (let i = tweets.length - 1; i >= 0; i--) {
+    tweetContainers += createTweetElement(tweets[i]);
     tweetContainers += "\n";
   }
   return tweetContainers;
-}
+};
 
 //Appends all the tweets so far into the main container
 const loadTweets = function() {
@@ -60,10 +61,10 @@ const loadTweets = function() {
       $('.tweets-list').append(renderTweets(res)); 
     }
   });
-}
+};
 
 //Upon server bootup, display the initial tweets
 $(document).ready(function() {
-  loadTweets()
+  loadTweets();
 });
 

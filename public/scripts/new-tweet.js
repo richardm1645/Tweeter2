@@ -1,16 +1,6 @@
 //Handles script when the user submits a tweet
 $(document).ready(function() {
 
-  //Changes color of the "Tweet" button on mouseover
-  $("#tweet-button").mouseover(function() {
-    $(this).css("background-color", "#829bef");
-  })
-  $("#tweet-button").mouseout(function(){
-    $(this).css("background-color", "#4056a1");
-  });
-
-  
-
   $("#tweet-post").on("submit", function(event) {
     event.preventDefault() //Prevents page refresh
     
@@ -34,6 +24,7 @@ $(document).ready(function() {
       tweetContent) 
       //Load all tweets, including the one just added
       .then( () => { 
+        $("#tweet-text").val("") //Clears tweet textarea
         loadTweets() //from client.js
       }) 
     }  
