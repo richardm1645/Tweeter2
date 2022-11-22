@@ -7,8 +7,9 @@ This repository is the starter code for the project: Students will fork and clon
 Features responsive design for desktop and tablet displays.
 
 ## Screenshots
-
+Desktop display
 !["Desktop display"](./docs/Desktop-display.png)
+Tablet display
 !["Tablet display"](./docs/Tablet-display.png)
 
 ## Getting Started
